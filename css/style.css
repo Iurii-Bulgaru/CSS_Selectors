@@ -1,0 +1,481 @@
+
+
+/* шрифти */
+   @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,regular,500,700,900");
+   
+/* обнулення */
+*,
+*::before,
+*::after {
+   padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+a,
+a:active {
+   text-decoration: none;
+   transition: ease-in 0.3s;
+
+}
+ul,
+ol,
+li {
+   list-style: none;
+}
+img {
+   vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: inherit;
+   font-size: inherit;
+}
+html,
+body {
+   height: 100%;
+   line-height: 1;
+   font-size: 16px;  
+   font-family: "Roboto";
+   
+}
+body{
+   background-color: rgba(0, 0, 0, 0.5);
+}
+/* ======================================= */
+a:hover {
+   text-decoration: underline;
+   color: rgb(66, 200, 223);
+   transition: ease-out 0.3s;
+}
+/* header ================================*/
+.header {
+   padding: 30px;
+   text-align: center;
+   color: transparent;
+   text-shadow: 9px 9px 4px rgba(0, 0, 0, 0.327);
+   box-shadow: 0px 0px 10px rgb(0, 0, 0) inset;
+   font-size: 30px;
+   font-weight: 500;
+   background-color: rgb(202, 120, 19);
+   background: linear-gradient(to left, green 40%, yellow 50%, green 61%);
+}
+.header span {
+   color: black;
+   font-size: 45px;
+   font-weight: 700;
+   padding: 0px 5px 0px 5px;
+}
+/* ======================================== */
+      .main {
+         padding: 15px 30px 30px 30px;
+      }
+/* h2-------------------------------------------------- */
+      h2 {
+         font-size: 20px;
+         padding: 5px;
+         margin-bottom: 15px;
+         letter-spacing: 1.5px;
+         text-align: center;
+         /* display: inline-block; */
+         color: rgb(21, 102, 90);
+         text-transform: capitalize;
+         border-radius: 30% 30% 10px 10px;
+         background-color: rgba(255, 255, 255, 0.273);
+         
+      }
+      h2 span {
+         text-decoration: underline;
+         text-decoration: inherit;
+         color: rgb(0, 0, 0);
+         font-size: 25px;
+         text-shadow: 0px 0px 10px rgb(7, 140, 242);
+         font-weight: 900;
+      }
+/* ================================================================================ */
+
+/* h3------------------------------------------------------------------------------ */
+      h3 {
+         font-size: 20px;
+         color: transparent;
+         text-shadow: 0 0px 1.5px rgb(0, 0, 0);
+         padding-bottom: 15px;
+      }
+/* ================================================================================ */
+
+/* navigation ----------------------------------------------------------------------*/
+
+      .navigation {
+         margin-bottom: 10px;
+      }
+      .navigation__list {
+         display: inline-block;
+         padding: 5px 10px;
+      }
+/* ================================================================================ */
+
+/* селектор *      ---------------------------------------------------------------- */
+      .section-lesson {
+         box-shadow: 0px 0px 10px rgb(0, 0, 0);
+         padding: 10px;
+         margin: 20px 0;
+         border-radius: 10px;
+      }
+      .section-lesson-one * {
+         display: block;
+         padding: 5px;
+         border: 1px solid #000;
+      }
+      .section-lesson-one span {
+      display: inline-block;
+      }
+/* ============================================================================================ */
+
+/* селектор > --------------------------------------------------------------------------------- */
+      .section__container-two * {
+         padding: 5px 0;
+      }
+      .section__container-two > P {
+         color: yellowgreen;
+      }
+      .div-one > div {
+         border: 1px solid #000;
+         color: rgb(47, 68, 67);
+      }
+      .div-one > h2{
+         color: rgb(36, 69, 205);
+      }
+      .div-one > div > h2 {
+         color: yellowgreen;
+      }
+/* ====================================================================================== */
+
+/* СЕЛЕКТОР ~ ---------------------------------------------------------------------------- */
+      .section__container_three * {
+         line-height: 1.5;
+      }
+      .block ~ div {
+         border: 1px solid rgb(156, 209, 42);
+         margin-left: 20px;
+      }
+      .text ~ p {
+         border: 1px solid black;
+         margin-left: 20px;
+         color: yellow;
+      }
+      .block > div {
+         color: red;
+      }
+      /* example */
+      .example {
+         text-align: center;
+      }
+      .example__contaier p{
+         font-size: 25px;
+         padding: 5px;
+      }
+      .example__contaier {
+         flex-direction: row-reverse;
+         display: inline-flex;
+      }
+      .button {
+         padding: 5px;
+         cursor: pointer;
+      }
+      .button:hover,
+      .button:hover ~ * {
+         background-color: steelblue;
+      }
+/* ================================================================ */
+
+/* 4 Запит до першого тега DIV
+який знаходяться безпосередньо після елементів з класом text
+на тому ж рівні вкладеності
+Спец. символ - +
+ */
+ .text-text + div {
+   color: greenyellow;
+   border: 1px solid #000000;
+}
+.section__container_four div p {
+   color: blue;
+}
+.section__container_four + div {
+   border: 1px solid rgb(156, 209, 42);
+   padding: 10px;
+}
+.section__container_four  div > div  > div > p span{
+   background-color: #fff;
+}
+/* ================================================================ */
+
+/* 5 Атрибут ID----------------------------------------------------- */
+
+#five {
+   background-color: rgb(209, 105, 14);
+   line-height: 1.5;
+   font-size: 16px;
+   }
+.section__container_five__body {
+   box-shadow: 0 5px 15px inset rgb(255, 165, 0, 0.5);
+   padding: 5px;
+   border-radius: 5px;
+}
+/* =================================================================
+
+/* 6  */
+/* Селектор імені атрибуту та його 
+значення за умови - [attr$=value] {}
+Запит до усіх елементів з ім'ям атрибуту attr, 
+значення якого закінчується на value */
+
+[class$="item"] {
+   border: 1px solid black;
+   padding: 15px;
+   font-size: 16px;
+   font-weight: 700;
+   text-align-last: left;
+}
+[class$="items"] {
+   text-align: center;
+   font-size: 25px;
+   font-weight: 700;
+   letter-spacing: 1.5px;
+}
+/* ================================================================= */
+
+/* 7 */
+/* Селектор імені атрибуту та його значення - [attr=value] { [href="https://www.youtube.com"] } */
+
+      .section__container_seven_item {
+         display: inline-block;
+         padding-right: 20px;
+         
+      }
+      [href="https://www.youtube.com"] {
+         color: rgb(206, 119, 119);
+      }
+      [href="https://www.youtube.com"]::before {
+         content: "";
+         color: #000;
+         display: inline-block;
+         width: 16px;
+         height: 16px;
+         vertical-align: middle;
+         background: url(../img/youtube-play.png) 0 0px / 16px no-repeat;
+         margin: 0px 5px 0px 0px;
+      }
+      [href="https://www.instagram.com"] {
+         color: rgb(209, 118, 174);
+      }
+         
+      [href="https://www.instagram.com"]::before {
+         content: "";
+         width: 16px;
+         height: 16px;
+         display: inline-block;
+         vertical-align: middle;
+         margin-right: 5px;
+         background: url(../img/instagram-new.png) 0 0px / 16px no-repeat;
+      }
+      [href="https://www.linkedin.com"] {
+         color: #0e76a6;
+      }
+      [href="https://www.linkedin.com"]:before {
+         content: "";
+         width: 16px; 
+         height: 16px;
+         margin-right: 5px;
+         display: inline-block;
+         vertical-align: middle;
+         background: url(../img/linkedin.png) 0 -1px / cover no-repeat;
+      }
+/* ================================================================= */
+
+/* 8 */
+/* Селектор імені атрибуту та його значення за умови - [attr*=value] {}
+   Запит до усіх елементів з ім'ям атрибуту attr, 
+   значення якого містить value */
+   .row {
+      max-width: 1020px;
+      margin: 0 auto;
+      text-align: center;
+      background-color: #0a587c;
+   }
+   [class*="__item"] {
+      font-size: 20px;
+      border: 5px inset rgb(241, 145, 37);
+      padding: 5px;
+   }
+   #thirty p {
+      text-align: center;
+      padding: 10px;
+      font-size: 25px;
+      font-weight: 700;
+      text-shadow: 2px 4px 10px #0a587c
+   }
+/* Example */
+   [class*="__container"] {
+      /* max-width: 1120px; */
+      margin: 0 auto;
+      padding: 5px;
+      text-align: center;
+      background-color: #0a587c;
+      border: 1px dotted black;
+
+   }
+   .scout {
+      border: 10px groove green;
+   }
+/* ====================================================================== */
+
+/* 9 */
+/* Селектор імені атрибуту та його 
+значення за умови - [attr^=value] {}
+Запит до усіх елементів з ім'ям атрибуту attr, значення якого 
+починається з value} */
+
+[class^="item"] {
+   padding: 5px;
+   border: 1px solid black;
+}
+/* ================================================================== */
+
+/* 10 */
+/* Селектор імені атрибуту та його 
+значення за умови - [attr|=value] {}
+Запит до усіх елементів з ім'ям атрибуту attr, 
+значення якого 
+може точно співпадати з value, або починатися 
+з value та дефісу value- */
+
+/* Селектор імені атрибуту та його значення за умови - [attr|=value]  */
+
+      [class|="page"] {
+      border: 1px solid black;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: 700;
+}
+/* ================================================================== */
+
+/* 11 */
+/* Селектор тегу DIV -----------------------------------------------*/
+.section__container {
+}
+.section__container_elewen div {
+   padding: 5px;
+   font-size: 18px;
+   color: white;
+   text-align-last: left;
+}
+.section__container_elewen > div {
+   color: black;
+}
+.section__container_elewen p {
+   font-size: 16px;
+   padding: 5px;
+}
+/* ================================================================= */
+
+/* 12 */
+/* Селектор класу -------------------------------------------------*/
+.section__container_twelwe__body {
+   background-color: rgb(209, 88, 88);
+   display: inline-block;
+   padding: 15px;
+   border-radius: 10px;
+}
+.section__container_twelwe__text {
+   text-transform: uppercase;
+   color: rgb(19, 228, 203);
+   padding: 5px;
+}
+.section__container_twelwe__span {
+   text-align: right;
+   display: block;
+   color: #fff;
+}
+.section__container_twelwe__span > span {
+   color: rgb(0, 7, 11);
+   font-size: 20px;
+}
+/* ================================================================ */
+
+/* 13 */
+/* Селектор атрибуту [href=""]-------------------------------------------------------*/
+.section__container_thirty__body li a{
+   padding: 5px;
+   display: inline-block;
+}
+.section__container_thirty__body [href] {
+      color: greenyellow;
+}
+.section__container_thirty__body [title]  {
+   color: rgba(43, 205, 226, 0.511);
+   } 
+/* ================================================================ */
+
+/* 14 */
+/* Комбінації CSS селекторів--------------------------------------------- */
+.section__container {
+   border-radius: 10px;
+}
+.container-combination-css ul, 
+.container-combination-css li, 
+.container-combination-css p, 
+.container-combination-css span, 
+.container-combination-css div {
+   font-size: 0;
+   border-style: none;
+}
+.container-combination-css {
+}
+.combination-css__body ul{ 
+   border: 5px #d2731a ridge;
+   padding: 10px;
+   font-size: 20px;
+   text-align: left;
+   color: #1a9bd2;
+   /* text-indent: 50px; */
+   text-transform: uppercase;
+
+}
+h3.container-combination-css-title {
+   font-size: 35px;
+   font-weight: 700;
+   letter-spacing: 10px;
+   text-transform: uppercase;
+}
+.combination-css__body li{
+   font-size: 16px;
+   padding: 5px;
+   color: #c2d3db;
+   text-align: center;
+   text-transform: capitalize;
+}
+.combination-css__body .combination-css__body-items {
+   font-weight: 900;
+}
+ul.combination-css__body-items{
+   text-indent: 50px;
+}
+ul.combination-css__body-items > ul li {
+   color: #000;
+}
+ul.combination-css__body__items-two li{
+   font-size: 20px;
+   letter-spacing: 5px;
+}
+.combination-css__body__item-two li{
+   font-size: 16px;
+   text-align: left;
+}
+/* ====================================================================== */
+/* 15 */
+/* Каскадність */
+/* ====================================================================== */

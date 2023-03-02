@@ -1,134 +1,408 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="css/style.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lesson_4</title>
-  </head>
-  <body>
-    <div class="content">
-      <div class="content_header">
-        <header id="1" >
-          <p  class="header_text">
-            lesson_4
-          </p>          
-        <div>
-          <nav>
-             <ul>
-               <li class="lesson_2">
-                  <a target="blank" href="https://iyriigho.github.io/Iyrii/">Lesson_2</a>               
-                </li>
-               <li class="lesson_3">
-                 <a target="blank" href="https://iyriigho.github.io/2021_iyrii_lesson_3/">Lesson_3</a>
-               </li>
-             </ul>
-          </nav>
-        </div>
-      </header>
-    </div>
-
-      <main class="main_content">
-        <p class="text_one">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.  <span class="text_one_span">Velit</span> amet porro omnis sapiente, in maiores odit alias expedita, voluptas, quidem sequi tenetur doloribus nihil dolor magni sint ex. Possimus, animi!
-        </p>
-
-        <p class="text_two">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. <span class="text_two_span">Nam</span> possimus expedita dolore nulla exercitationem architecto eum blanditiis quisquam dicta! Minima, error perspiciatis dicta molestiae repellendus quam iure doloribus doloremque. Odit.
-        </p>
-          <div>
-            <p class="title_fonts">Види шрифтів</p>
-              <ul class="title_fonts_ul">
-                <li>
-                  serif — шрифты с засечками (антиквенные), типа Times;
-                </li>
-                <li>
-                  sans-serif — рубленные шрифты (шрифты без засечек или гротески), типичный представитель — Arial;
-
-                </li>
-                <li>
-                  cursive — курсивные шрифты;
-                </li>
-                <li>
-                  fantasy — декоративные шрифты;
-                </li>
-                <li>
-                  monospace — моноширинные шрифты, ширина каждого символа в таком семействе одинакова (шрифт Courier).
-                </li>
-              </ul>
-          </div>
-          <div>
-            <p class="title_style">font-style: Определяет начертание шрифта — обычное, курсивное или наклонное.</p>
-              <ul class="title_style_ul">
-                <li>
-                  normal - Обычное начертание текста.
-                </li>
-                <li>
-                  italic - Курсивное начертание.
-                </li>
-                <li>
-                  oblique - Наклонное начертание. Курсив и наклонный шрифт при всей их похожести не одно и то же. Курсив это специальный шрифт имитирующий рукописный, наклонный же образуется путем наклона обычных знаков вправо. 
-                </li>
-              </ul>
-          </div>
-          <div>
-              <p class="title_weight">font-weight: Устанавливает насыщенность шрифта.</p>
-                <ul class="title_weight_ul">
-                  <li>
-                    100 - thin
-                  </li>
-                  <li>
-                    300 - lite
-                  </li>
-                  <li>
-                    400 - normal
-                  </li>
-                  <li>
-                    500 - medium
-                  </li>
-                  <li>
-                    600 - semibold
-                  </li>
-                  <li>
-                    700 - bold
-                  </li>
-                  <li>
-                    900 - black
-                  </li>
-                </ul>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>lesson-3</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">Lesson 3 - <span>css</span> selectors</div>
+    <main class="main">
+<!-- navigation -->
+      <div class="section-lesson">
+        <h2>типи: <span>css</span> селекторів</h2>
+        <nav class='navigation'>
+          <ul class="navigation__items">
+            <li class="navigation__list"><a href="#one">селектор *</a></li>
+            <li class="navigation__list"><a href="#two">селектор ></a></li>
+            <li class="navigation__list"><a href="#tree">селектор ~</a></li>
+            <li class="navigation__list"><a href="#four">селектор +</a></li>
+            <li class="navigation__list"><a href="#five">селектор ID</a></li>
+            <li class="navigation__list"><a href="#six">селекторів [attr$=value]</a></li>
+            <li class="navigation__list"><a href="#seven">селекторів [attr=value]</a></li>
+            <li class="navigation__list"><a href="#eight">селекторів [attr*=value]</a></li>
+            <li class="navigation__list"><a href="#nine">селекторів [attr^=value]</a></li>
+            <li class="navigation__list"><a href="#ten">селекторів [attr|=value]</a></li>
+            <li class="navigation__list"><a href="#elewen">селекотор тегу</a></li>
+            <li class="navigation__list"><a href="#twelwe">селектор класу</a></li>
+            <li class="navigation__list"><a href="#thirty">селектор атрибуту</a></li>
+            <li class="navigation__list"><a href="#four">комбінації css селекторів</a></li>
+            <li class="navigation__list"><a href="#">каскадність NON</a></li>
+          </ul>
+        </nav>
+      </div>
+<!-- ================================================================== -->
+<!-- 1 Селектор * -->
+      <section id="one" class="section-lesson">
+        <h2>селектор <span>*</span></h2>
+        <h3>Універсальний селектор * також можна використовувати для стилізації всіх нащадків елемента</h3>
+        <div class='section-lesson-one'>
+          <p>Обирає всі елементи на сторінці. <span>це SPAN в P</span></p>
+          <div>Обирає всі елементи на сторінці. <span>це SPAN в DIV</span></div>
+          <span>Обирає всі тегі span в цьому блоці.<span>це SPAN в SPAN</span></span>
+        </div>  
+      </section>
+<!-- 2 селектор > -->
+      <section id="two" class="section-lesson">
+        <h2>селектор <span>></span> </h2>
+        <div class="section__container-two ">
+        <h3>селектор тільки першого рівня вкладеності.</h3>
+            <p>Перший рівень вкладеності P</p>
+            <span>Перший рівень вкладеності SPAN</span>
+            <div class="div-one">DIV першої вкладеності
+              <div class="div-two">DIV в DIV другої вкдаденості
+                <p>Другий рівень вкладеності P в DIV</p>
+                <span>Другий рівень вкладеності span в DIV</span>
+              </div>
             </div>
-            <div>
-              <p class="text-align"> text-align:
-                Определяет горизонтальное выравнивание текста и строчных объектов в пределах элемента. 
+            <div class="div-one">DIV першої вкладеності
+              <h2>h2 другої вкладеності в DIV</h2>
+              <div class="div-two">DIV в DIV другої вкдаденості
+                <h2>h2 другої вкладеності в DIV</h2>
+                <p> текст P в DIV <span>другий рівень вкладеності текст в ( div / h2 / p / span )</span></p>
+              </div>
+            </div>
+            <p>
+              <span>другий рівень вкладеності текст ( P в SPAN )</span>
+            </p>
+          </div>
+      </section>
+<!-- ==================================================================== -->
+
+<!-- 3 селектор ~  -->
+        <section id="three" class="section-lesson" >
+          <h2>селектор <span>~</span> </h2>
+          <h3>>Селектор після селектора того ж рівня (~)</h3>
+          <div class="section__container section__container_three">
+          <div class="block"> 
+            Я DIV з класом "block
+              <div>Я DIV з класом "text</div>
+          </div>
+          <p>А я параграф P</p>
+            <div class="block">
+              Я DIV з класом "block
+              <div class="text">Я DIV з класом "text" в DIV класом "block"</div>
+            </div>
+            <div class="text">
+              <div class="block">Я DIV з класом "text
+                <div>Я DIV в DIV з класом block
+                  <div>Я DIV в DIV з класом "text" а потім ще в DIV</div>
+                </div>
+              </div>
+            </div>
+            <div class="text block">
+              Я DIV з класом "text" та з класом "block"
+              <p>А я параграф P в DIV з класом "text" та з класом "block"</p>
+            </div>
+          <p>А я параграф P</p>
+          <p>І я параграф P</p>
+            <div>Я просто DIV</div>
+          </div>
+          <div class="example">
+              <div class="example__contaier">
+                <button class="button" type="button">5</button>
+                <button class="button" type="button">4</button>
+                <button class="button" type="button">3</button>
+                <button class="button" type="button">2</button>
+                <button class="button" type="button">1</button>
+              </div>
+          </div>
+        </section>
+<!-- ==================================================================== -->
+
+<!-- 4 Селектор +  -->
+        <section id="four" class="section-lesson">
+          <h2>Cелектор <span>+</span></h2>
+          <h3>Запит до першого наступного вказаного об'єкта того ж рівня вкладеності далі по коду</h3>
+          <h3>Запит до усіх перших елементів після вказаного елемента з класом text-text</h3>
+          <div class="section__container section__container_four">
+            <div class="div-container">
+							<div class="text-text">
+								Я DIV з класом "text-text"
+								<div>
+									Я DIV в DIV класом "text-text"
+								</div>
+							</div>
+							<div class="block-block">
+								Я DIV з класом "block-block"
+								<div class="text-text">
+									Я DIV з класом "text" в DIV класом "block-block"
+								</div>
+                <p>І я параграф P в DIV класом "block-block"</p>
+							</div>
+							<div class="text-text">
+								Я DIV класом "text-text" в DIV
+								<div>
+									Я DIV в DIV з класом "text-text"
+									<div>
+										Я DIV в DIV з класом "text-text" а потім ще в DIV
+									</div>
+								</div>
+							</div>
+							<div class="text-text block-block">
+								Я DIV з класом "text" та з класом "block"
+								<p>А я параграф P в DIV з класом "text" та з класом "block-block"</p>
+							</div>
+							<p>А я параграф P</p>
+							<p>І я параграф P</p>
+              <p class="text-text">Я DIV з класом "text-text"</p>
+              <div class="block-block">Я просто eлемент div</div>
+							<div>Я DIV</div>
+						</div>
+          </div>
+        </section>
+<!-- ==================================================================== -->
+
+<!-- 5 Селектор ID  -->
+        <section id="five" class="section-lesson">
+          <h2>Селектор <span>ID</span></h2>
+          <h3>Запит до тегу з атрибутом ID (id="") element </h3>
+          <div class="section__container section__container_five">
+            <div class="section__container_five__body">
+              <p class="section__container_five__text">
+                Селектор стилізує елемент із вказаним ідентифікатором.#id
               </p>
-              <ul class="text-align_ul">
-                <li>
-                  center - Выравнивание текста по центру.
-                </li>
-                <li>
-                  justify - Выравнивание по ширине, что означает одновременное выравнивание по левому и правому краю. Чтобы произвести это действие браузер в этом случае добавляет пробелы между словами.
-                </li>
-                <li>
-                  left - Выравнивание текста по левому краю. 
-                </li>
-                <li>
-                  right - Выравнивание текста по правому краю.
-                </li>
-              </ul>  
+              <p class="section__container_five__text">
+                Селектор стилізує елемент із вказаним ідентифікатором.#id
+              </p>
+              <p class="section__container_five__text">
+                Селектор стилізує елемент із вказаним ідентифікатором.#id
+              </p>
             </div>
-      </main>
+            <span class="section__container_five__span">
+              Селектор стилізує елемент із вказаним ідентифікатором.#id
+            </span>
+          </div>
+        </section>
+<!-- ==================================================================== -->
+
+<!-- 6 Селектор імені атрибуту та його значення за умови - [attr$=value] -->
+        <section id="six" class="section-lesson">
+          <h2>Селектор  імені атрибуту та його значення за умови<span> [attr$=value] {} </span></h2>
+          <h3>Запит до усіх елементів з ім'ям атрибуту attr, 
+            значення якого закінчується на value </h3>
+            <div class="pag">
+              Предок 
+              <ul class="pag-items"> 
+                <li class="pag-item">child.li</li>
+                <li class="pag-item">child.li</li>
+                <li class="pag-item">child.li</li>
+              </ul>
+            </div>
+        </section>
+<!-- END ================================================================ -->
+
+<!-- 7 Селектор імені атрибуту та його значення - [attr=value] {}  -->
+        <section id="seven" class="section-lesson">
+          <h2>Селектор  імені атрибуту та його значення <span> [attr=value] {} </span></h2>
+          <h3>Запит до усіх елементів з ім'ям атрибуту attr </h3>
+          <h3>та значенням яке точно співпадає з value. (регістр має значення).</h3>
+            <div class="section__container section__container_seven">
+              <ul class="section__container_seven_items">
+                <li class="section__container_seven_item">
+                  <a href="https://www.youtube.com" target="_blank">youtube.com</a>
+                </li>
+                <li class="section__container_seven_item">
+                  <a href="https://www.instagram.com">instagram.com</a>
+                </li>
+                <li class="section__container_seven_item">
+                  <a href="https://www.linkedin.com">linkedin.com</a>
+                </li>
+              </ul>
+            </div>
+        </section>
+<!-- ==================================================================== -->
+
+<!-- 8 Селектор імені атрибуту та його значення за умови [attr*=value] -->
+        <section id="eight" class="section-lesson">
+          <h2>Селектор  імені атрибуту та його значення за умови<span> [attr*=value] {} </span></h2>
+          <h3>Запит до усіх елементів з ім'ям атрибуту attr, значення якого 
+            починається з value </h3>
+            <div class="row">
+              <ul class="row__items">
+                <li class="row__item item-row">Child.li</li>
+                <li class="row__item item-row">Child.li</li>
+                <li class="row__item item-row">Child.li</li>
+              </ul>
+            </div>
+            <p>Example: </p>
+            <div class="scout">
+              <div class="track-block">
+                <div class="track-block__container block-oll">
+                  Container 1
+                </div>
+              </div>
+              <div class="valchalla">
+                <div class="valchalla__container block-oll">
+                  Container 2
+                </div>
+              </div>
+              <div class="computer">
+                <div class="computer__container block-oll">
+                  Container 3
+                </div>
+              </div>
+            </div>
+        </section>
+<!-- END================================================================= -->
+
+<!-- 9 Селектор імені атрибуту та його значення за умови - [attr^=value] {} -->
+<section id="nine" class="section-lesson">
+  <h2>Селектор імені атрибуту та його значення за умови <span> [attr^=value] {} </span></h2>
+  <h3>Запит до усіх елементів з ім'ям атрибуту attr, значення якого 
+    починається з value </h3>
+    <div class="row">
+      <ul class="row__items">
+        <li class="row__item item-row">Child.li</li>
+        <li class="row__item item-row">Child.li</li>
+        <li class="row__item item-row">Child.li</li>
+      </ul>
     </div>
-    
-    <div class="footer_content">
-        <footer class="footer">
-          text-shadow: горизонтальное_смещение вертикальное_смещение размер цвет;
-          Добавляет тень к тексту.
-          Пример text-shadow: 1px 1px 1px #000;
-          <p class="top">
-            <a href="#1">На початок</a>
-          </p>
-        </footer>
-    </div>  
+    <p>Example: </p>
+    <div class="scout">
+      <div class="track-block">
+        <div class="track-block__container block-oll">
+          Container 1
+        </div>
+      </div>
+      <div class="valchalla">
+        <div class="valchalla__container block-oll">
+          Container 2
+        </div>
+      </div>
+      <div class="computer">
+        <div class="computer__container block-oll">
+          Container 3
+        </div>
+      </div>
+    </div>
+</section>
+<!-- END================================================================= -->
+
+<!-- 10 Селектор імені атрибуту та його значення за умови - [attr|=value] {} -->
+        <section id="ten" class="section-lesson">
+          <h2>Селектор  імені атрибуту та його значення за умови<span> [attr|=value] {} </span></h2>
+          <h3>Запит до усіх елементів з ім'ям атрибуту attr 
+            та значенням яке уявляє собою набір слів розділених пробілом, 
+            та одне з яких точно співпадає з value. (регістр має значення) </h3>
+            <div class="page">
+              Предок 
+              <ul class="page-items"> 
+                <li class="page-item">child.li</li>
+                <li class="page-item">child.li</li>
+                <li class="page-item">child.li</li>
+              </ul>
+            </div>
+        </section>
+<!-- END================================================================= -->
+
+<!-- 11 -->
+<!-- Селектор  тегу DIV -->
+        <section id="elewen" class="section-lesson">
+          <h2>Селектор Тегу <span>div</span></h2>
+          <h3>Запит до усіх вказаних тегів на сторінці. </h3>
+          <h3>Може використовуватись коли нам треба описати стилі для певних тегів на сторінці</h3>
+          <div class="section__container section__container_elewen">
+            <div>Я DIV первого рівня
+              <p>Я Р в DIV-первого рівня</p>
+            </div>
+            <p>Я текст первого рівня</p>
+            <p>І Я текст первого рівня</p>
+            <div>Я DIV первого рівня
+              <div>Я DIV другого рівня
+                <div>Я DIV третього рівня
+                  <p>Я текст в DIV третього рівня 
+                    <span>ПРИКЛАД: .section__container_elewen div > div > div > p span</span></p>
+                </div>
+              </div>
+            </div>
+            <div>Я DIV первого рівня
+              <p>Я Р в DIV-первого рівня</p>
+            </div>
+            <div>Я DIV первого рівня
+              <p>Я Р в DIV-первого рівня</p>
+            </div>
+          </div>
+        </section>
+<!-- ==================================================================== -->
+ 
+<!-- 12 -->
+<!-- Селектор класу -->
+        <section id="twelwe" class="section-lesson">
+          <h2>Селектор класу <span>class="block"</span></h2>
+          <h3>Запит до усіх тегів з класом на сторінці. </h3>
+          <div class="section__container section__container_twelwe">
+            <div class="section__container_twelwe__body">
+              <p class="section__container_twelwe__text">
+                Я P з класом section__container_twelwe__text
+              </p>
+                <p class="section__container_twelwe__text">
+                  Я P з класом section__container_twelwe__text
+              </p>
+              <p class="section__container_twelwe__text">
+                Я p з класом section__container_twelwe__text
+              </p>
+            </div>
+            <span class="section__container_twelwe__span">
+              Я SPAN з класом <span>section__container_twelwe__span</span>
+            </span>
+          </div>
+        </section>
+<!-- ==================================================================== -->
+
+<!-- 13 -->
+<!-- Селектор атрибуту -->
+        <section id="thirty" class="section-lesson">
+          <h2>Селектор Атрибуту<span> [attr] {} </span></h2>
+          <h3>Запит до тегів з певним атрибутом, його значенням та умовами.</h3>
+          <h3>Може використовуватись коли нам треба описати стилі для будь-якого елемента але з певними умовами та параметрами.</h3>
+          <div class="section__container section__container_thirty">
+            <div class="section__container_thirty__body">
+              <ul>
+                <li>
+                  <a href="#">Селектор імені атрибуту <span>[href]</span></a>
+                </li>
+                <li>
+                  <a title="Силка на ютуб CSS" href="https://www.youtube.com/watch?v=UOgtWxnv92c" target="_blank">Селектор імені атрибуту з підказкою [title="Я підказка"]</a>
+                </li>
+              </ul>      
+            </div>
+          </div>
+        </section>
+<!-- ==================================================================== -->
+
+<!-- 14 -->
+<!-- комбінації css селекторів -->
+<section id="#" class="section-lesson">
+  <h2>комбінації<span> css </span>селекторів </h2>
+  <h3>Пріоритет різних комбінацій селекторів  </h3>
+  <h3>Більший пріоритет буде у комбінацій селекторів, які більш звужують (уточють, конкретизуть) пошук (запит)</h3>
+  <div class="section__container container-combination-css">
+    <div class="combination-css__body">
+      <h3 class="container-combination-css-title">Title</h3>
+      <ul class="combination-css__body-items">
+        <li class="combination-css__body-item">Список</li>
+          <li class="combination-css__body-item">Список
+            <ul class="combination-css__body__items-two">
+              <li class="combination-css__body__item-two">Список в списку</li>
+            </ul>
+          </li>
+        <li class="combination-css__body__list">Список</li>
+        <li class="combination-css__body__list">Список</li>
+      </ul>
+      <p class="combination-css__body-text">TEXT з класом class="combination-css__body-text"</p>
+      <div class="combination-css__body-text"> DIV з класом class="combination-css__body-text"</div>
+      <span class="combination-css__body-span">SPAN</span>
+    </div>
+  </div>
+</section>
+<!-- ==================================================================== -->
+
+</main>
+<!-- main end -->
+    </div>
 </body>
 </html>
