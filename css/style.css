@@ -387,13 +387,20 @@ a:hover {
 .section__container_twelwe__body {
    background-color: rgb(209, 88, 88);
    display: inline-block;
-   padding: 15px;
+   padding: 10px;
    border-radius: 10px;
 }
 .section__container_twelwe__text {
    text-transform: uppercase;
    color: rgb(19, 228, 203);
    padding: 5px;
+  
+
+
+   
+}
+.section__container_twelwe__text + p {
+   color: #1a9bd2;
 }
 .section__container_twelwe__span {
    text-align: right;
